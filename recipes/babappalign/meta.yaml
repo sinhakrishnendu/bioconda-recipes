@@ -13,10 +13,16 @@ build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
+  run_exports:
+    - {{ pin_subpackage('babappalign', max_pin='x') }}
+
+
 requirements:
   host:
     - python >=3.9
     - pip
+    - setuptools
+    - wheel
   run:
     - python >=3.9
     - numpy
