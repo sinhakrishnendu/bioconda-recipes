@@ -21,6 +21,7 @@ requirements:
     - pip
     - setuptools
     - wheel
+    - transformers >=4.30   # 🔑 REQUIRED for test-time imports
 
   run:
     - python >=3.9
@@ -29,8 +30,6 @@ requirements:
     - pandas
     - biopython
     - tqdm
-
-    # Explicit ML stack (architecture-dependent)
     - pytorch >=1.12
     - transformers >=4.30
     - fair-esm
